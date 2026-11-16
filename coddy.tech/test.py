@@ -1,13 +1,12 @@
-wind = int(input("what is the wind"))
-op = input("s")
-status = "unset"
-
-if op == "+":
-    result = n1 + n2
-elif op == "-":
-    result = n1 - n2
-elif op == "/":
-    result = n1 / n2
-elif op == "*":
-    result = n1 * n2
-print(status)
+age = int(input())
+with_parent = input("please enter true (yes) or no:") == "true"
+message = ""
+# Write your nested if-else code here
+if age >= 18:
+    message = "You can watch any movie"
+else:
+    if with_parent:
+        message = "You can watch PG-13 movies"
+    else:
+        message = "You can only watch G-rated movies"
+print(message)
