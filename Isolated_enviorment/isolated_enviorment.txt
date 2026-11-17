@@ -1,0 +1,15 @@
+When creating an isolated enviorment, create a folder named .venv inside the project directory
+Then use python3 -m venv .venv (switch python3 with python)
+One that is done, then a folder with .venv will show up.
+Use this code to activate the enviorment
+# On macOS / Linux
+source .venv/bin/activate
+
+# On Windows (Command Prompt)
+.venv\Scripts\activate.bat
+
+# On Windows (PowerShell)
+.venv\Scripts\Activate.ps1
+
+Now you can intall any pip install comman while it is active, and it won't affect anything else.
+To deativate the enviomrent. enter deactivate in the terminal
