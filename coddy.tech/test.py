@@ -1,12 +1,4 @@
-age = int(input())
-with_parent = input("please enter true (yes) or no:") == "true"
-message = ""
-# Write your nested if-else code here
-if age >= 18:
-    message = "You can watch any movie"
-else:
-    if with_parent:
-        message = "You can watch PG-13 movies"
-    else:
-        message = "You can only watch G-rated movies"
-print(message)
+def order(item, quantity=1, express=False):
+    print(item, quantity, express)
+
+order("Book", 3)
