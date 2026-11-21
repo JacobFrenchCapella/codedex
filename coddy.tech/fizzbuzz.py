@@ -8,6 +8,8 @@ def fizzbuzz(num):
         return "Fizz"
     elif num % 7 == 0:
         return "Buzz"
+    elif "3" in str(num):
+        return "Almost Fizz"
     else:
         return str(num)
 
