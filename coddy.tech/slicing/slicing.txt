@@ -1,0 +1,88 @@
+================================================================================
+PYTHON SLICING & COMMON LIST/STRING METHODS CHEAT SHEET
+================================================================================
+
+1. SLICING SYNTAX
+--------------------------------------------------------------------------------
+Basic Format: sequence[start : stop : step]
+
+- start : The index where the slice begins (inclusive). Defaults to 0.
+- stop  : The index where the slice ends (exclusive - NOT included). Defaults to end.
+- step  : How many items to move forward (or backward) each time. Defaults to 1.
+
+Example List:
+nums = [10, 20, 30, 40, 50, 60, 70, 80]
+Index:   0   1   2   3   4   5   6   7
+NegIdx: -8  -7  -6  -5  -4  -3  -2  -1
+
+
+2. DIFFERENT SLICING METHODS & PATTERNS
+--------------------------------------------------------------------------------
+# Get a range of items (index 1 up to, but not including, index 4)
+nums[1:4]       -> [20, 30, 40]
+
+# From the beginning up to index 3
+nums[:3]        -> [10, 20, 30]
+
+# From index 4 all the way to the end
+nums[4:]        -> [50, 60, 70, 80]
+
+# Copy the entire list
+nums[:]         -> [10, 20, 30, 40, 50, 60, 70, 80]
+
+# Every second element (step = 2)
+nums[::2]       -> [10, 30, 50, 70]
+
+# Every third element starting from index 1
+nums[1::3]      -> [20, 50, 80]
+
+# Negative Indexing (counting from the end)
+nums[-3:]       -> [60, 70, 80]      # Last 3 items
+nums[:-2]       -> [10, 20, 30, 40, 50, 60]  # Everything except last 2
+
+# Reversing with a negative step
+nums[::-1]      -> [80, 70, 60, 50, 40, 30, 20, 10]  # Full reverse
+nums[5::-1]     -> [60, 50, 40, 30, 20, 10]          # From index 5 down to 0
+nums[6:1:-2]    -> [70, 50, 30]                      # Reverse with step of 2
+
+# Using the built-in slice() object (reusable slice)
+first_three = slice(0, 3)
+nums[first_three] -> [10, 20, 30]
+
+
+3. COMMON LIST METHODS
+--------------------------------------------------------------------------------
+# Adding items
+lst.append(x)        # Adds x to the end of the list
+lst.insert(i, x)     # Inserts x at index i
+lst.extend(other)    # Appends all elements from another list/iterable
+
+# Removing items
+lst.pop()            # Removes and returns the last item (or item at index i: lst.pop(i))
+lst.remove(x)        # Removes the first occurrence of value x (raises ValueError if missing)
+lst.clear()          # Removes all items from the list
+
+# Searching & Counting
+lst.index(x)         # Returns the index of the first occurrence of x
+lst.count(x)         # Returns how many times x appears in the list
+
+# Ordering & Copying
+lst.sort()           # Sorts the list in place (ascending; use reverse=True for descending)
+lst.reverse()        # Reverses the list in place
+lst.copy()           # Returns a shallow copy of the list
+
+
+4. COMMON STRING & SEQUENCE METHODS (OFTEN USED WITH LISTS)
+--------------------------------------------------------------------------------
+text.split(",")      # Splits a string into a list using "," as the separator
+text.split()         # Splits a string by any whitespace into a list of words
+",".join(lst)        # Joins a list of strings into one string separated by ","
+text.strip()         # Removes leading and trailing spaces/newlines
+text.lower()         # Converts all characters to lowercase
+text.upper()         # Converts all characters to uppercase
+text.replace(a, b)   # Replaces occurrences of substring a with b
+
+# Built-in Helper Functions
+len(seq)             # Returns the number of items in a list or characters in a string
+enumerate(seq)       # Yields (index, value) pairs when looping over a sequence
+================================================================================

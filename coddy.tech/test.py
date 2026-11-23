@@ -1,4 +1,5 @@
-def order(item, quantity=1, express=False):
-    print(item, quantity, express)
-
-order("Book", 3)
+pokemon = ['Reshiram', 'Mew', 'Oshawott', 'card']
+pokemon.append('Charmander')
+print(pokemon)
+del pokemon[0:5:2]
+print(pokemon)

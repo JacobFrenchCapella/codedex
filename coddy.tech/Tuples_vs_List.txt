@@ -1,0 +1,6 @@
+List take more memory compared to tuples, they also use [].
+This is generally slower due to the editability.
+This is also not hashable (cannot be used as dictionry keys)
+List have more methods due to being mutable.
+
+Tuples, uses () and is not able to be editied, unless you manually do it. 
