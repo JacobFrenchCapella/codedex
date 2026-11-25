@@ -1,0 +1,1 @@
+Python sequence operators such as + or * are great for clean, readable code for small to medium data, though they come with memeory trade off at massive scale
